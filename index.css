@@ -1,0 +1,114 @@
+body {
+    background-color: #23272f;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, h1 {
+    text-align: center;
+    color: #f4f4f4;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #b0b8c1;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 18px;
+    padding: 22px 18px 18px 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+    margin-bottom: 24px;
+    background: #2d313a;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    width: 270px;
+}
+
+.producto:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+    background: #353945;
+}
+
+.producto img {
+    width: 100%;
+    max-width: 230px;
+    height: 230px;
+    object-fit: cover;
+    image-rendering: auto;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    transition: opacity 0.5s, transform 0.3s;
+    opacity: 1;
+    background: #23272f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn-info {
+    background: #444950;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-info:hover {
+    background: #23272f;
+    color: #fff;
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 900px) {
+    .galeria {
+        gap: 14px;
+    }
+    .producto {
+        width: 60vw;
+        min-width: 180px;
+    }
+    .producto img {
+        width: 90%;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria {
+        gap: 8px;
+        padding: 10px 0;
+    }
+    .producto {
+        width: 98vw;
+        min-width: 120px;
+        padding: 10px 4px 12px 4px;
+    }
+    .producto img {
+        width: 95vw;
+        height: 120px;
+    }
+}
